@@ -1,43 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import useForm from '../../hooks/useForm';
 
 const SignupForm = () => {
-  const [values, setValues] = useState({
-    userName: '',
-    gender: '',
-    maritalStatus: '',
-    dateOfBirth: '',
-    luckyNumber: ''
-  
-  });
-
-  const [submissions, setSubmission] = useState([
-    {
-      userName: 'april123',
-      gender: 'female',
-      maritalStatus: 'married',
-      dateOfBirth: '2000-01-01',
-      luckyNumber: '3'
-    }
-  ]);
-
-  const addSubmission = (values) => {
-    const newSubmissions = [...submissions, values];
-    setSubmission(newSubmissions);
-  };
-
-  const handleChange = event => {
-    const { name, value } = event.target
-    setValues({
-      ...values,
-      [name]: value
-    })
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    addSubmission(values);
-    console.log(submissions);
-  };
+  const { values, errors, handleChange, handleSubmit } = useForm()
 
   return (
     <div>
@@ -52,6 +17,7 @@ const SignupForm = () => {
             value={values.userName || ''}
             className="border-solid border-2 border-current m-2"
           />
+          {errors.userName && (<p>{errors.userName}</p>)}
         </div>
         <div>
           <div className="m-2 pr-4">
@@ -78,6 +44,7 @@ const SignupForm = () => {
                 value='other'
                 onChange={handleChange}
               />
+              {errors.gender && (<p>{errors.gender}</p>)}
             </div>
           </div>
           <div className="m-2 pr-4">
@@ -104,6 +71,7 @@ const SignupForm = () => {
                 value='other'
                 onChange={handleChange}
               />
+              {errors.maritalStatus && (<p>{errors.maritalStatus}</p>)}
             </div>
           </div>
           <div>
@@ -115,6 +83,7 @@ const SignupForm = () => {
               value={values.dateOfBirth || ''}
               className="border-solid border-2 border-current m-2"
             />
+            {errors.dateOfBirth && (<p>{errors.dateOfBirth}</p>)}
           </div>
           <div>
             <label className="m-2 pr-4">Lucky Number:</label>
@@ -125,6 +94,7 @@ const SignupForm = () => {
               value={values.luckyNumber || ''}
               className="border-solid border-2 border-current m-2"
             />
+            {errors.luckyNumber && (<p>{errors.luckyNumber}</p>)}
           </div>
         </div>
         <div>
