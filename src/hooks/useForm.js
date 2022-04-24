@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import formValidation from '../components/Error/formValidation';
 
-const useForm = () => {
+const useForm = submitForm => {
   const [values, setValues] = useState({
     userName: '',
     gender: '',
@@ -22,16 +22,12 @@ const useForm = () => {
   const [errors, setErrors] = useState({})
   const [correctData, setCorrectData] = useState(false)
 
-  //temp form validation
-  const [isSubmitted, setIsSubmitted] = useState(true)
-  const submitForm = () => {
-    setIsSubmitted(isSubmitted)
-  }
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && correctData) {
+      submitForm(true)
     }
-  }, [ correctData, errors])
+  }, [ submitForm, correctData, errors])
 
   const addSubmission = (values) => {
     const newSubmissions = [...submissions, values];
@@ -51,7 +47,6 @@ const useForm = () => {
     setErrors(formValidation(values))
     setCorrectData(true)
     addSubmission(values)
-    submitForm()
     console.log(submissions)
   };
 

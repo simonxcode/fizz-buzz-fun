@@ -414,11 +414,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-2 {
   margin: 0.5rem;
 }
+.m-4 {
+  margin: 1rem;
+}
 .block {
   display: block;
 }
 .flex {
   display: flex;
+}
+.max-w-md {
+  max-width: 28rem;
 }
 .items-center {
   align-items: center;
@@ -443,6 +449,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .border-current {
   border-color: currentColor;
+}
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 .p-4 {
   padding: 1rem;

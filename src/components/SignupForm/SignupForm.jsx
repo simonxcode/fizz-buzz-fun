@@ -1,12 +1,12 @@
 import React from 'react'
 import useForm from '../../hooks/useForm';
 
-const SignupForm = () => {
-  const { values, errors, handleChange, handleSubmit } = useForm()
+const SignupForm = ({submitForm}) => {
+  const { values, errors, handleChange, handleSubmit } = useForm(submitForm)
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="p-4">
+      <form onSubmit={handleSubmit} className="max-w-md bg-green-100 p-4">
         <h1 className="text-2xl font-bold">Signup Form</h1>
         <div>
           <label className="m-2 pr-4">Username:</label>

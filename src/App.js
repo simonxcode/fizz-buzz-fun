@@ -1,11 +1,11 @@
 import React from 'react'
-import SignupForm from './components/SignupForm';
+import Main from './components/Main'
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-blue-100">
       <p className="text-4xl text-center font-bold p-4">Fizz Buzz Fun</p>
-      <SignupForm />
+      <Main />
     </div>
   );
 }
