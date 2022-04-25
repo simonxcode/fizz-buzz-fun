@@ -2,14 +2,28 @@ import React from 'react'
 
 const Result = ({ submission }) => {
   return (
-    <div className="grid grid-rows-3 grid-flow-col bg-green-50 p-4">
-      <div className="bg-red-50 p-4">
-        <p>Username: {submission.userName}</p>
-        <p>Gender: {submission.gender}</p>
-        <p>Marital Status: {submission.maritalStatus}</p>
-        <p>Date of Birth: {submission.dateOfBirth}</p>
-        <p>Lucky Number: {submission.userName}</p>
-        <p>Team: {submission.team}</p>
+    <div className="p-4 bg-gray-200">
+      <div className="bg-gray-50 p-4 border-solid border">
+        <div className="flex">
+          <p className="font-bold pr-2">Username:</p>
+          <p>{submission.userName}</p>
+        </div>
+        <div className="flex">
+          <p className="font-bold pr-2">Gender:</p>
+          <p>{submission.gender}</p>
+        </div>
+        <div className="flex">
+          <p className="font-bold pr-2">Date of Birth:</p>
+          <p>{submission.dateOfBirth}</p>
+        </div>
+        <div className="flex">
+          <p className="font-bold pr-2">Lucky Number:</p>
+          <p>{submission.luckyNumber}</p>
+        </div>
+        <div className="flex">
+          <p className="font-bold pr-2">Team:</p>
+          <p>{submission.team}</p>
+        </div>
       </div>
     </div>
   )

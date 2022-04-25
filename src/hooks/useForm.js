@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import formValidation from '../components/Error/formValidation';
 
-const useForm = submitForm => {
+const useForm = () => {
   const [values, setValues] = useState({
     userName: '',
     gender: '',
@@ -19,30 +19,6 @@ const useForm = submitForm => {
       luckyNumber: '3',
       team: 'fizz'
    },
-    {
-      userName: 'april123',
-      gender: 'female',
-      maritalStatus: 'married',
-      dateOfBirth: '2000-01-01',
-      luckyNumber: '3',
-      team: 'fizz'
-   },
-    {
-      userName: 'april123',
-      gender: 'female',
-      maritalStatus: 'married',
-      dateOfBirth: '2000-01-01',
-      luckyNumber: '3',
-      team: 'fizz'
-   },
-    {
-      userName: 'april123',
-      gender: 'female',
-      maritalStatus: 'married',
-      dateOfBirth: '2000-01-01',
-      luckyNumber: '3',
-      team: 'fizz'
-   }
 ]);
 
   const [errors, setErrors] = useState({})
@@ -58,12 +34,12 @@ const useForm = submitForm => {
     const newSubmissions = [...submissions, values]
     if(values.luckyNumber!== '') {
       setSubmission(newSubmissions)
+      setValues('')
     }
-      
   };
 
     const handleFizzBuzz = (submissions) => {
-      const fizzBuzz = submissions.map(ele => {
+      submissions.map(ele => {
         if (ele.luckyNumber % 15 === 0) {
           return (ele.team = "fizzbuzz");
         } else if (ele.luckyNumber % 5 === 0) {
@@ -90,7 +66,6 @@ const useForm = submitForm => {
     setCorrectData(true)
     addSubmission(values)
     handleFizzBuzz(submissions)
-    console.log('submissions after submit', submissions)
   };
 
   return {
