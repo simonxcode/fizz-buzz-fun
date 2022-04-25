@@ -2,7 +2,7 @@
 
 exports[`Header component should match snapshot 1`] = `
 <div
-  className="flex justify-center items-center text-4xl text-center font-semibold p-4 text-emerald-900 drop-shadow-xl"
+  className="flex justify-center items-center text-4xl text-center font-bold p-4 drop-shadow-xl"
 >
   Fizz Buzz Fun
 </div>

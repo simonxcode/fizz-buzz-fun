@@ -2,10 +2,10 @@
 
 exports[`Form component should match snapshot 1`] = `
 <div
-  className="justify-center items-center p-4 bg-blue-50"
+  className="p-4 bg-green-50"
 >
   <form
-    className="justify-center item-center"
+    className="p-4  border-solid border bg-gray-50"
     onSubmit={[Function]}
   >
     <h1
@@ -15,7 +15,7 @@ exports[`Form component should match snapshot 1`] = `
     </h1>
     <div>
       <label
-        className="m-2 pr-4"
+        className="m-2 font-bold"
       >
         Username:
       </label>
@@ -32,10 +32,14 @@ exports[`Form component should match snapshot 1`] = `
       <div
         className="m-2 pr-4"
       >
-        Gender:
+        <p
+          className="font-bold"
+        >
+          Gender:
+        </p>
         <div>
           <label
-            className="m-2 pr-4"
+            className="ml-4 mr-2"
           >
             male
           </label>
@@ -46,7 +50,7 @@ exports[`Form component should match snapshot 1`] = `
             value="male"
           />
           <label
-            className="m-2 pr-4"
+            className="mr-2 ml-4"
           >
             female
           </label>
@@ -57,7 +61,7 @@ exports[`Form component should match snapshot 1`] = `
             value="female"
           />
           <label
-            className="m-2 pr-4"
+            className="mr-2 ml-4"
           >
             other
           </label>
@@ -72,10 +76,14 @@ exports[`Form component should match snapshot 1`] = `
       <div
         className="m-2 pr-4"
       >
-        Marital Status:
+        <p
+          className="font-bold"
+        >
+          Marital Status:
+        </p>
         <div>
           <label
-            className="m-2 pr-4"
+            className="ml-4 mr-2"
           >
             single
           </label>
@@ -86,7 +94,7 @@ exports[`Form component should match snapshot 1`] = `
             value="single"
           />
           <label
-            className="m-2 pr-4"
+            className="ml-4 mr-2"
           >
             married
           </label>
@@ -97,7 +105,7 @@ exports[`Form component should match snapshot 1`] = `
             value="female"
           />
           <label
-            className="m-2 pr-4"
+            className="ml-4 mr-2"
           >
             other
           </label>
@@ -111,7 +119,7 @@ exports[`Form component should match snapshot 1`] = `
       </div>
       <div>
         <label
-          className="m-2 pr-4"
+          className="m-2 font-bold"
         >
           Date of Birth:
         </label>
@@ -125,7 +133,7 @@ exports[`Form component should match snapshot 1`] = `
       </div>
       <div>
         <label
-          className="m-2 pr-4"
+          className="m-2 font-bold"
         >
           Lucky Number:
         </label>
@@ -146,131 +154,71 @@ exports[`Form component should match snapshot 1`] = `
     </button>
   </form>
   <div
-    className="grid grid-rows-3 grid-flow-col bg-green-50 p-4"
+    className="p-4 bg-gray-200"
   >
     <div
-      className="bg-red-50 p-4"
+      className="bg-gray-50 p-4 border-solid border"
     >
-      <p>
-        Username: 
-        april123
-      </p>
-      <p>
-        Gender: 
-        female
-      </p>
-      <p>
-        Marital Status: 
-        married
-      </p>
-      <p>
-        Date of Birth: 
-        2000-01-01
-      </p>
-      <p>
-        Lucky Number: 
-        april123
-      </p>
-      <p>
-        Team: 
-        fizz
-      </p>
-    </div>
-  </div>
-  <div
-    className="grid grid-rows-3 grid-flow-col bg-green-50 p-4"
-  >
-    <div
-      className="bg-red-50 p-4"
-    >
-      <p>
-        Username: 
-        april123
-      </p>
-      <p>
-        Gender: 
-        female
-      </p>
-      <p>
-        Marital Status: 
-        married
-      </p>
-      <p>
-        Date of Birth: 
-        2000-01-01
-      </p>
-      <p>
-        Lucky Number: 
-        april123
-      </p>
-      <p>
-        Team: 
-        fizz
-      </p>
-    </div>
-  </div>
-  <div
-    className="grid grid-rows-3 grid-flow-col bg-green-50 p-4"
-  >
-    <div
-      className="bg-red-50 p-4"
-    >
-      <p>
-        Username: 
-        april123
-      </p>
-      <p>
-        Gender: 
-        female
-      </p>
-      <p>
-        Marital Status: 
-        married
-      </p>
-      <p>
-        Date of Birth: 
-        2000-01-01
-      </p>
-      <p>
-        Lucky Number: 
-        april123
-      </p>
-      <p>
-        Team: 
-        fizz
-      </p>
-    </div>
-  </div>
-  <div
-    className="grid grid-rows-3 grid-flow-col bg-green-50 p-4"
-  >
-    <div
-      className="bg-red-50 p-4"
-    >
-      <p>
-        Username: 
-        april123
-      </p>
-      <p>
-        Gender: 
-        female
-      </p>
-      <p>
-        Marital Status: 
-        married
-      </p>
-      <p>
-        Date of Birth: 
-        2000-01-01
-      </p>
-      <p>
-        Lucky Number: 
-        april123
-      </p>
-      <p>
-        Team: 
-        fizz
-      </p>
+      <div
+        className="flex"
+      >
+        <p
+          className="font-bold pr-2"
+        >
+          Username:
+        </p>
+        <p>
+          april123
+        </p>
+      </div>
+      <div
+        className="flex"
+      >
+        <p
+          className="font-bold pr-2"
+        >
+          Gender:
+        </p>
+        <p>
+          female
+        </p>
+      </div>
+      <div
+        className="flex"
+      >
+        <p
+          className="font-bold pr-2"
+        >
+          Date of Birth:
+        </p>
+        <p>
+          2000-01-01
+        </p>
+      </div>
+      <div
+        className="flex"
+      >
+        <p
+          className="font-bold pr-2"
+        >
+          Lucky Number:
+        </p>
+        <p>
+          3
+        </p>
+      </div>
+      <div
+        className="flex"
+      >
+        <p
+          className="font-bold pr-2"
+        >
+          Team:
+        </p>
+        <p>
+          fizz
+        </p>
+      </div>
     </div>
   </div>
 </div>
