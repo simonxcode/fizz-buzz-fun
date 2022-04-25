@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import formValidation from '../components/Error/formValidation';
+import formValidation from '../components/Error/formValidation'
 
 const useForm = () => {
   const [values, setValues] = useState({
