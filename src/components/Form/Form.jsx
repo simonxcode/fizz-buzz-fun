@@ -6,12 +6,13 @@ const Form = () => {
   const { values, submissions, errors, handleChange, handleSubmit } = useForm()
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="max-w-md bg-green-100 p-4">
-        <h1 className="text-2xl font-bold">Signup Form</h1>
+    <div className="justify-center items-center p-4 bg-blue-50">
+      <form onSubmit={handleSubmit} className="justify-center item-center">
+        <h1 className="text-2xl font-bold">Signup to join the fun</h1>
         <div>
           <label className="m-2 pr-4">Username:</label>
           <input
+            autoFocus={true}  
             type='text'
             name='userName'
             onChange={handleChange}
@@ -98,13 +99,12 @@ const Form = () => {
             {errors.luckyNumber && (<p>{errors.luckyNumber}</p>)}
           </div>
         </div>
-        <div>
-          <input type='submit' value='Submit' className="border-solid border-2  border-current m-2 pl-2 pr-2 rounded-md" />
-        </div>
+        <button type='submit'className="border-solid border-2  border-current m-2 pl-2 pr-2 rounded-md">
+          Submit
+        </button>
       </form>
-      {
-        submissions.map((submission, index) => (
-          <Result key={index} submission={submission} />
+      {submissions.map((submission, index) => (
+        <Result key={index} submission={submission} />
         ))}
     </div>
   )

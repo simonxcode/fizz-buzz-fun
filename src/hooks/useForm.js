@@ -10,14 +10,40 @@ const useForm = submitForm => {
     luckyNumber: ''
   });
 
-  const [submissions, setSubmission] = useState([{
-    userName: 'april123',
-    gender: 'female',
-    maritalStatus: 'married',
-    dateOfBirth: '2000-01-01',
-    luckyNumber: '3',
-    team: 'fizz'
-  }]);
+  const [submissions, setSubmission] = useState([
+    {
+      userName: 'april123',
+      gender: 'female',
+      maritalStatus: 'married',
+      dateOfBirth: '2000-01-01',
+      luckyNumber: '3',
+      team: 'fizz'
+   },
+    {
+      userName: 'april123',
+      gender: 'female',
+      maritalStatus: 'married',
+      dateOfBirth: '2000-01-01',
+      luckyNumber: '3',
+      team: 'fizz'
+   },
+    {
+      userName: 'april123',
+      gender: 'female',
+      maritalStatus: 'married',
+      dateOfBirth: '2000-01-01',
+      luckyNumber: '3',
+      team: 'fizz'
+   },
+    {
+      userName: 'april123',
+      gender: 'female',
+      maritalStatus: 'married',
+      dateOfBirth: '2000-01-01',
+      luckyNumber: '3',
+      team: 'fizz'
+   }
+]);
 
   const [errors, setErrors] = useState({})
   const [correctData, setCorrectData] = useState(false)
