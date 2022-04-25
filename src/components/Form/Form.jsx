@@ -1,8 +1,9 @@
 import React from 'react'
+import Result from '../Result';
 import useForm from '../../hooks/useForm';
 
-const SignupForm = ({submitForm}) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(submitForm)
+const Form = () => {
+  const { values, submissions, errors, handleChange, handleSubmit } = useForm()
 
   return (
     <div>
@@ -101,8 +102,12 @@ const SignupForm = ({submitForm}) => {
           <input type='submit' value='Submit' className="border-solid border-2  border-current m-2 pl-2 pr-2 rounded-md" />
         </div>
       </form>
+      {
+        submissions.map((submission, index) => (
+          <Result key={index} submission={submission} />
+        ))}
     </div>
   )
 }
 
-export default SignupForm;
+export default Form;

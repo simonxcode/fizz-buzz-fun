@@ -8,7 +8,6 @@ const useForm = submitForm => {
     maritalStatus: '',
     dateOfBirth: '',
     luckyNumber: ''
-
   });
 
   const [submissions, setSubmission] = useState([{
@@ -16,7 +15,8 @@ const useForm = submitForm => {
     gender: 'female',
     maritalStatus: 'married',
     dateOfBirth: '2000-01-01',
-    luckyNumber: '3'
+    luckyNumber: '3',
+    team: 'fizz'
   }]);
 
   const [errors, setErrors] = useState({})
@@ -25,14 +25,30 @@ const useForm = submitForm => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && correctData) {
-      submitForm(true)
     }
-  }, [ submitForm, correctData, errors])
+  }, [correctData, errors])
 
   const addSubmission = (values) => {
-    const newSubmissions = [...submissions, values];
-    setSubmission(newSubmissions);
+    const newSubmissions = [...submissions, values]
+    if(values.luckyNumber!== '') {
+      setSubmission(newSubmissions)
+    }
+      
   };
+
+    const handleFizzBuzz = (submissions) => {
+      const fizzBuzz = submissions.map(ele => {
+        if (ele.luckyNumber % 15 === 0) {
+          return (ele.team = "fizzbuzz");
+        } else if (ele.luckyNumber % 5 === 0) {
+          return (ele.team = "buzz");
+        } else if (ele.luckyNumber % 3 === 0) {
+          return (ele.team = "fizz");
+        } else {
+          return (ele.team = "unknown");
+        } 
+      });
+    };
 
   const handleChange = event => {
     const { name,value } = event.target
@@ -47,7 +63,8 @@ const useForm = submitForm => {
     setErrors(formValidation(values))
     setCorrectData(true)
     addSubmission(values)
-    console.log(submissions)
+    handleFizzBuzz(submissions)
+    console.log('submissions after submit', submissions)
   };
 
   return {
